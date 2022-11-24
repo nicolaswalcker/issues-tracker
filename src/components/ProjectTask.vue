@@ -1,9 +1,12 @@
 <template>
   <ProjectBox class="box has-text-weight-bold">
     <section class="columns">
-      <article class="column is-7">
+      <article class="column is-4">
         {{ task.description || 'Tarefa sem descrição' }}
       </article>
+      <div class="column is-3">
+        {{task.project?.name || 'Sem projeto'}}
+      </div>
       <ProjectStopwatch :time="task.durationInSecs" />
     </section>
   </ProjectBox>
